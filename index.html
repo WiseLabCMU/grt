@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="logo-abstract.svg">
+
+<title>GRT</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div class="container">
+
+<div class="section">
+    <img src='logo-images.svg' style='height: 200px; width: auto; vertical-align: text-top; margin-bottom: -30px'>
+    <h2>Towards Foundational Models for Single-Chip Radar</h2>
+    <div class="authors">
+        <span><a href="index.html">Tianshu Huang</a><sup>13</sup></span>
+        <span><a href="https://akarsh-prabhakara.github.io/">Akarsh Prabhakara</a><sup>2</sup></span>
+        <span><a href="https://sally-chen.github.io/">Chuhan Chen</a><sup>1</sup></span>
+        <span><a href="https://jaykarhade.github.io/">Jay Karhade</a><sup>1</sup></span>
+        <span><a href="https://www.cs.cmu.edu/~deva/">Deva Ramanan</a><sup>1</sup></span>
+        <span><a href="https://www.cs.cmu.edu/~motoole2/">Matthew O'Toole</a><sup>1</sup></span>
+        <span><a href="https://users.ece.cmu.edu/~agr/">Anthony Rowe</a><sup>13</sup></span>
+    </div>
+    <div class="authors">
+        <span><sup>1</sup>Carnegie Mellon University</span>
+        <span><sup>2</sup>University of Wisconsin - Madison</span>
+        <span><sup>3</sup>Bosch Research</span>
+    </div>
+    <div class="paper-links">
+        <a href="" target="_blank">Paper, dataset, & more coming soon!</a>
+    </div>
+</div>
+
+<div class="section">
+<p>
+<b>Abstract:</b>
+mmWave radars are compact, inexpensive, and durable sensors that are robust to occlusions and work regardless of environmental conditions, such as weather and darkness. However, this comes at the cost of poor angular resolution, especially for inexpensive single-chip radars, which are typically used in automotive and indoor sensing applications. Although many have proposed learning-based methods to mitigate this weakness, no standardized foundational models or large datasets for the mmWave radar have emerged, and practitioners have largely trained task-specific models from scratch using relatively small datasets.
+</p><p>
+In this paper, we collect (to our knowledge) the largest available raw radar dataset with 1M samples (29 hours) and train a foundational model for 4D single-chip radar, which can predict 3D occupancy and semantic segmentation with quality that is typically only possible with much higher resolution sensors. We demonstrate that our Generalizable Radar Transformer (GRT) generalizes across diverse settings, can be fine-tuned for different tasks, and shows logarithmic data scaling of 20% per 10x data. We also run extensive ablations on common design decisions, and find that using raw radar data significantly outperforms widely-used lossy representations, equivalent to a 10x increase in training data. Finally, we roughly estimate that ~100M samples (3000 hours) of data are required to fully exploit the potential of GRT.
+</p>
+
+</div>
+</body>
+</html>
