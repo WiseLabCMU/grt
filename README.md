@@ -2,11 +2,10 @@
 
 Implementation of the *Generalizable Radar Transformer (GRT)* and the experiments shown in *Towards Foundational Models for Single-Chip Radar*.
 
-
 > [!IMPORTANT]
-> This repository is **research code**, and may contain bugs, outdated links, dependency incompatibilities, and other issues. Use at your own risk!
+> This repository is **research code**, and may contain bugs, outdated links, dependency incompatibilities, and other issues. Getting this code to run in your environment may require a substantial amount of effort, including manually linking to deprecated versions of other dependencies.
 > 
-> Future research should instead build on the [Neural Radar Development Kit](https://radarml.github.io/nrdk/) and [RadarML ecosystem](https://radarml.github.io/), which are being actively developed, maintained, and supported.
+> Future research should instead build on the [Neural Radar Development Kit](https://radarml.github.io/nrdk/) and [RadarML ecosystem](https://radarml.github.io/), which are being actively developed, maintained, and supported, and includes an [official reference implementation of the GRT paper](https://radarml.github.io/nrdk/grt/).
 
 ## Setup
 
@@ -15,12 +14,12 @@ Implementation of the *Generalizable Radar Transformer (GRT)* and the experiment
     ```sh
     pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
     pip install -r requirements.txt
-    pip install "roverd[video,ouster]@git+ssh://git@github.com/WiseLabCMU/red-rover.git#subdirectory=format"
+    pip install "roverd[video,ouster]@git+ssh://git@github.com/RadarML/red-rover.git#subdirectory=format"
     ```
 
 2. Get data:
 
-    See [red-rover](https://github.com/WiseLabCMU/red-rover/tree/main/processing) for full instructions.
+    See [red-rover](https://github.com/RadarML/red-rover/tree/main/processing) for full instructions.
 
     For each target dataset:
     ```sh
