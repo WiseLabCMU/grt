@@ -1,6 +1,12 @@
-# Deep Radar
+# GRT: Towards Foundational Models for Single-Chip Radar
 
-Radar deep learning toolkit.
+Implementation of the *Generalizable Radar Transformer (GRT)* and the experiments shown in *Towards Foundational Models for Single-Chip Radar*.
+
+
+> [!IMPORTANT]
+> This repository is **research code**, and may contain bugs, outdated links, dependency incompatibilities, and other issues. Use at your own risk!
+> 
+> Future research should instead build on the [Neural Radar Development Kit](https://radarml.github.io/nrdk/) and [RadarML ecosystem](https://radarml.github.io/), which are being actively developed, maintained, and supported.
 
 ## Setup
 
@@ -42,20 +48,3 @@ Radar deep learning toolkit.
     ```sh
     tensorboard --logdir=path/to/results --host=0.0.0.0
     ```
-
-## Current Training Command
-
-Base model:
-```
-nq python train.py -c rxf[small] obj[map] aug[full] data[indoor,outdoor,bike]
-```
-
-Fine tune:
-```
-nq python train.py -c rxf[small] obj[segment] aug[full] data[indoor,outdoor,bike] -b results/small/base -df
-```
-
-Resume:
-```
-nq python train.py -k results/small/base/checkpoints/last.ckpt -n small -v convergence --metric loss/train
-```
